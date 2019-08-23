@@ -10,13 +10,13 @@ if (!$conn) {
 die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully <br />";
-$trunc="truncate table multiple_table";
+$trunc="truncate table multiplication_table";
 mysqli_query($conn,$trunc);
 echo "table truncated <br />";
 for($i=1;$i<=30;$i++)
 {
 $result=$i*5;
-$sql="insert into multiple_table(multiplicant,multiplier,result)values('$i',5,'$result')";
+$sql="insert into multiplication_table(multiplicant,multiplier,result)values('$i',5,'$result')";
 $res=mysqli_query($conn,$sql);
 echo " $res <br />";
 mysqli_close($conn);
